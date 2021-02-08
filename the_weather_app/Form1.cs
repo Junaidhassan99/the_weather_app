@@ -21,23 +21,33 @@ namespace the_weather_app
             InitializeComponent();
             Console.WriteLine("Form initialized");
 
-
-
-
-            Console.WriteLine(GeneralUtilities.getJsonStringResponse("https://www.googleapis.com/books/v1/volumes/s1gVAAAAYAAJ"));
+            try
+            {
+                textBox1.Text = ApiUtilities.getWeatherByCityName("paris");
+            }
+            catch (Exception  exception)
+            {
+                Console.WriteLine(exception);
+                textBox1.Text = "Invalid City";
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             Console.WriteLine("Form Loaded");
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
-    public class GeneralUtilities
+    public class ApiUtilities
     {
         public static string getJsonStringResponse(string urlString)
         {
-            HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(string.Format(urlString));
+            HttpWebRequest WebReq = (HttpWebRequest)WebRequest.Create(urlString);
 
             WebReq.Method = "GET";
 
@@ -58,7 +68,20 @@ namespace the_weather_app
             return jsonString;
 
         }
+
+        public static string getWeatherByCityName(string cityName)
+        {
+            string urlString = Credentials.initialApiSearchByCity + "?q=" + cityName + "&appid=" + Credentials.apiKey;
+            return ApiUtilities.getJsonStringResponse(urlString);
+        }
+
     }
 
-    
+    public class Credentials
+    {
+        //open weather service is being used
+        public static string apiKey = "9c0a03a6202a00f30ffdb380c085ec83";
+        public static string initialApiSearchByCity = "https://api.openweathermap.org/data/2.5/weather";
+
+    }
 }
