@@ -1,7 +1,7 @@
 ﻿
 namespace the_weather_app
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.

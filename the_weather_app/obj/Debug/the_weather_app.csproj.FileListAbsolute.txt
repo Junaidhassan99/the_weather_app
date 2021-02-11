@@ -10,4 +10,4 @@ D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app
 D:\Working\C# Projects\the_weather_app\the_weather_app\bin\Debug\Newtonsoft.Json.dll
 D:\Working\C# Projects\the_weather_app\the_weather_app\bin\Debug\Newtonsoft.Json.xml
 D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csproj.CopyComplete
-D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.Form1.resources
+D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.Home.resources
