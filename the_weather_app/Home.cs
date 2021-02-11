@@ -25,9 +25,9 @@ namespace the_weather_app
             {
                 //textBox1.Text = ApiUtilities.getWeatherByCityName("paris");
                 CurrentWeather currentWeather= ApiUtilities.getWeatherByCityName("paris");
-                cityLable.Text ="City : "+ currentWeather.cityName;
-                coordLabel.Text = "Coordinates : " + currentWeather.coordinated;
-                tempLabel.Text = "Temperature : " + currentWeather.temp;
+                cityLable.Text ="City : "+ currentWeather.CityName;
+                coordLabel.Text = "Coordinates : " + currentWeather.Coordinate;
+                tempLabel.Text = "Temperature : " + currentWeather.Temp;
             }
             catch (Exception  exception)
             {

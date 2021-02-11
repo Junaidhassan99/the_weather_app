@@ -16,15 +16,54 @@ namespace the_weather_app
 
     public class CurrentWeather
     {
-        public string coordinated;
-        public string temp;
-        public string cityName;
+        private string coordinate;
+        private string temp;
+        private string cityName;
 
         public CurrentWeather(string coordinated, string temp, string cityName)
         {
-            this.coordinated = coordinated;
+            this.coordinate = coordinated;
             this.cityName = cityName;
             this.temp = temp;
+        }
+
+        public string Coordinate
+        {
+            get
+            {
+                return coordinate;
+            }
+
+            set
+            {
+                coordinate = value;
+            }
+        }
+
+        public string Temp
+        {
+            get
+            {
+                return temp;
+            }
+
+            set
+            {
+                temp = value;
+            }
+        }
+
+        public string CityName
+        {
+            get
+            {
+                return cityName;
+            }
+
+            set
+            {
+                cityName = value;
+            }
         }
     }
 
