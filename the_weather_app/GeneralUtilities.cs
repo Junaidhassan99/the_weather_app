@@ -14,6 +14,20 @@ namespace the_weather_app
     {
     }
 
+    public class CurrentWeather
+    {
+        public string coordinated;
+        public string temp;
+        public string cityName;
+
+        public CurrentWeather(string coordinated, string temp, string cityName)
+        {
+            this.coordinated = coordinated;
+            this.cityName = cityName;
+            this.temp = temp;
+        }
+    }
+
     public class ApiUtilities
     {
         public static string getJsonStringResponse(string urlString)
@@ -34,16 +48,27 @@ namespace the_weather_app
                 jsonString = reader.ReadToEnd();
             }
 
-            //List<Item> items = JsonConvert.DeserializeObject<List<Item>>(jsonString);
 
             return jsonString;
 
         }
 
-        public static string getWeatherByCityName(string cityName)
+        public static CurrentWeather getWeatherByCityName(string cityName)
         {
             string urlString = Credentials.initialApiSearchByCity + "?q=" + cityName + "&appid=" + Credentials.apiKey;
-            return ApiUtilities.getJsonStringResponse(urlString);
+
+            string jsonResponse = ApiUtilities.getJsonStringResponse(urlString);
+
+            dynamic weatherData = JsonConvert.DeserializeObject(jsonResponse);
+
+            Console.WriteLine("test : {0}", weatherData.name);
+
+
+            CurrentWeather currentWeather = new CurrentWeather(Convert.ToString(weatherData.coord.lon + " , " + weatherData.coord.lat), Convert.ToString(weatherData.main.temp), Convert.ToString(weatherData.name));
+
+
+
+            return currentWeather;
         }
 
     }

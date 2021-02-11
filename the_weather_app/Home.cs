@@ -23,18 +23,22 @@ namespace the_weather_app
 
             try
             {
-                textBox1.Text = ApiUtilities.getWeatherByCityName("paris");
+                //textBox1.Text = ApiUtilities.getWeatherByCityName("paris");
+                CurrentWeather currentWeather= ApiUtilities.getWeatherByCityName("paris");
+                cityLable.Text ="City : "+ currentWeather.cityName;
+                coordLabel.Text = "Coordinates : " + currentWeather.coordinated;
+                tempLabel.Text = "Temperature : " + currentWeather.temp;
             }
             catch (Exception  exception)
             {
                 Console.WriteLine(exception);
-                textBox1.Text = "Invalid City";
+                //textBox1.Text = "Invalid City";
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Home_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Form Loaded");
+            Console.WriteLine("Home Loaded");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
