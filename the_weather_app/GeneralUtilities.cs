@@ -110,5 +110,12 @@ namespace the_weather_app
             return currentWeather;
         }
 
+        public static string getImageUrl(string keyword)
+        {
+
+            return "http://openweathermap.org/img/wn/" + keyword + "@2x.png";
+
+        }
+
     }
 }
