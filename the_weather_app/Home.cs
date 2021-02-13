@@ -49,7 +49,7 @@ namespace the_weather_app
             string searchTextBoxString;
             if (e.KeyChar == (char)Keys.Enter)
             {
-                searchTextBoxString=searchTextBox.Text;
+                searchTextBoxString = searchTextBox.Text;
                 setCurrentWeatherData(searchTextBoxString);
             }
         }
@@ -57,9 +57,20 @@ namespace the_weather_app
         private void setCurrentWeatherData(string cityName)
         {
             CurrentWeather currentWeather = ApiUtilities.getWeatherByCityName(cityName);
-            cityLable.Text = "City : " + currentWeather.CityName;
-            coordLabel.Text = "Coordinates : " + currentWeather.Coordinate;
-            tempLabel.Text = "Temperature : " + currentWeather.Temp;
+            cityLable.Text = currentWeather.CityName + ", " + currentWeather.Country;
+            tempLabel.Text = "Temperature : " + ApiUtilities.convertKelvenToCelcius(currentWeather.Temp) + "°";
+            feelsLikeLabel.Text = "Feels Like : " + ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike) + "°";
+            pressureLabel.Text = "Pressure : " + currentWeather.Pressure + " hPa";
+            humidityLabel.Text = "Humidity : " + currentWeather.Humidity + " %";
+            windLabel.Text = currentWeather.WindSpeed + " ms, " + currentWeather.WindDirection + "°";
+            cloudCoverLabel.Text = "Cloud Cover : " + currentWeather.CloudCover + " %";
+            currentWeatherIconImage.ImageLocation = ApiUtilities.getImageUrl(currentWeather.ImageIcon);
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
