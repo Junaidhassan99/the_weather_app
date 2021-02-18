@@ -11,6 +11,7 @@ namespace the_weather_app
         //open weather service is being used
         public static string apiKey = "9c0a03a6202a00f30ffdb380c085ec83";
         public static string initialApiSearchByCity = "https://api.openweathermap.org/data/2.5/weather";
+        public static string initialApiForcasteSearchByCity = "https://api.openweathermap.org/data/2.5/forecast";
 
     }
 }

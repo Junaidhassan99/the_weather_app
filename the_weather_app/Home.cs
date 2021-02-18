@@ -56,7 +56,7 @@ namespace the_weather_app
 
         private void setCurrentWeatherData(string cityName)
         {
-            CurrentWeather currentWeather = ApiUtilities.getWeatherByCityName(cityName);
+            CurrentWeather currentWeather = ApiUtilities.getCurrentWeatherByCityName(cityName);
             cityLable.Text = currentWeather.CityName + ", " + currentWeather.Country;
             tempLabel.Text = "Temperature : " + ApiUtilities.convertKelvenToCelcius(currentWeather.Temp) + "°";
             feelsLikeLabel.Text = "Feels Like : " + ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike) + "°";
@@ -65,6 +65,8 @@ namespace the_weather_app
             windLabel.Text = currentWeather.WindSpeed + " ms, " + currentWeather.WindDirection + "°";
             cloudCoverLabel.Text = "Cloud Cover : " + currentWeather.CloudCover + " %";
             currentWeatherIconImage.ImageLocation = ApiUtilities.getImageUrl(currentWeather.ImageIcon);
+
+            ApiUtilities.getForecastWeatherByCityName(cityName);
 
         }
 

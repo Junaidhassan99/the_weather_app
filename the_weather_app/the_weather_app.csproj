@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Credentials.cs" />
+    <Compile Include="CurrentWeather.cs" />
+    <Compile Include="ForecastWeather.cs" />
     <Compile Include="GeneralUtilities.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
