@@ -14,7 +14,7 @@ namespace the_weather_app
     {
     }
 
-    
+
 
     public class ApiUtilities
     {
@@ -53,11 +53,23 @@ namespace the_weather_app
 
             //decode json string respnse to list of forecaste weather data
             dynamic weatherData = JsonConvert.DeserializeObject(jsonResponse);
-            List<ForecastWeather> forecastWeathersList = JsonConvert.DeserializeObject<List<ForecastWeather>>(JsonConvert.SerializeObject(weatherData.list));
+            List<dynamic> weatherDataList = JsonConvert.DeserializeObject<List<dynamic>>(JsonConvert.SerializeObject(weatherData.list));
 
-            Console.WriteLine("test : {0}", forecastWeathersList.Count);
+            Console.WriteLine("test : {0}", weatherDataList.Count);
 
-            return forecastWeathersList;
+            List<ForecastWeather> forecastWeatherDataList = new List<ForecastWeather>();
+
+            foreach (dynamic weatherDataListElement in weatherDataList)
+            {
+
+                forecastWeatherDataList.Add(new ForecastWeather(Convert.ToString(weatherDataListElement.main.temp),
+                Convert.ToString(weatherDataListElement.weather[0].icon), Convert.ToString(weatherDataListElement.main.feels_like), Convert.ToString(weatherDataListElement.main.pressure),
+                Convert.ToString(weatherDataListElement.main.humidity), Convert.ToString(weatherDataListElement.wind.speed),
+                Convert.ToString(weatherDataListElement.wind.deg), Convert.ToString(weatherDataListElement.clouds.all)));
+
+            }
+
+            return forecastWeatherDataList;
         }
 
         public static CurrentWeather getCurrentWeatherByCityName(string cityName)

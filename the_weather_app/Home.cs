@@ -51,6 +51,7 @@ namespace the_weather_app
             {
                 searchTextBoxString = searchTextBox.Text;
                 setCurrentWeatherData(searchTextBoxString);
+                setForecasteWeatherData(searchTextBoxString);
             }
         }
 
@@ -62,11 +63,22 @@ namespace the_weather_app
             feelsLikeLabel.Text = "Feels Like : " + ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike) + "°";
             pressureLabel.Text = "Pressure : " + currentWeather.Pressure + " hPa";
             humidityLabel.Text = "Humidity : " + currentWeather.Humidity + " %";
-            windLabel.Text = currentWeather.WindSpeed + " ms, " + currentWeather.WindDirection + "°";
+            windLabel.Text = "Wind : " + currentWeather.WindSpeed + " ms, " + currentWeather.WindDirection + "°";
             cloudCoverLabel.Text = "Cloud Cover : " + currentWeather.CloudCover + " %";
             currentWeatherIconImage.ImageLocation = ApiUtilities.getImageUrl(currentWeather.ImageIcon);
 
-            ApiUtilities.getForecastWeatherByCityName(cityName);
+
+
+        }
+
+        private void setForecasteWeatherData(string cityName)
+        {
+            List<ForecastWeather> forecastWeatherList = ApiUtilities.getForecastWeatherByCityName(cityName);
+
+            foreach (ForecastWeather forecastWeatherElement in forecastWeatherList)
+            {
+                Console.WriteLine("test : {0}", forecastWeatherElement.Temp);
+            }
 
         }
 
