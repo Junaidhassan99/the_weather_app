@@ -77,7 +77,7 @@ namespace the_weather_app
 
             foreach (ForecastWeather forecastWeatherElement in forecastWeatherList)
             {
-                Console.WriteLine("test : {0}", forecastWeatherElement.Temp);
+                Console.WriteLine("test : {0}", forecastWeatherElement.DateText);
             }
 
         }

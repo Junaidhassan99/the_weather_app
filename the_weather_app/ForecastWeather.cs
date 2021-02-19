@@ -16,11 +16,12 @@ namespace the_weather_app
         private string windSpeed;
         private string windDirection;
         private string cloudCover;
-
+        private string dateText;
 
 
         public ForecastWeather(string temp, string imageIcon, string feelsLike,
-            string pressure, string humidity, string windSpeed, string windDirection, string cloudCover
+            string pressure, string humidity, string windSpeed, string windDirection, string cloudCover,
+            string dateText
             )
         {
 
@@ -33,6 +34,7 @@ namespace the_weather_app
             this.windSpeed = windSpeed;
             this.windDirection = windDirection;
             this.cloudCover = cloudCover;
+            this.dateText = dateText;
 
         }
 
@@ -136,6 +138,20 @@ namespace the_weather_app
             set
             {
                 cloudCover = value;
+            }
+        }
+
+
+        public string DateText
+        {
+            get
+            {
+                return dateText;
+            }
+
+            set
+            {
+                dateText = value;
             }
         }
 

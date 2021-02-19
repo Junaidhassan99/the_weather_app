@@ -65,7 +65,8 @@ namespace the_weather_app
                 forecastWeatherDataList.Add(new ForecastWeather(Convert.ToString(weatherDataListElement.main.temp),
                 Convert.ToString(weatherDataListElement.weather[0].icon), Convert.ToString(weatherDataListElement.main.feels_like), Convert.ToString(weatherDataListElement.main.pressure),
                 Convert.ToString(weatherDataListElement.main.humidity), Convert.ToString(weatherDataListElement.wind.speed),
-                Convert.ToString(weatherDataListElement.wind.deg), Convert.ToString(weatherDataListElement.clouds.all)));
+                Convert.ToString(weatherDataListElement.wind.deg), Convert.ToString(weatherDataListElement.clouds.all),
+                Convert.ToString(weatherDataListElement.dt_txt)));
 
             }
 
