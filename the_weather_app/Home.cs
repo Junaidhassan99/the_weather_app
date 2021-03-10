@@ -71,6 +71,8 @@ namespace the_weather_app
         private void setCurrentWeatherData(string cityName)
         {
             CurrentWeather currentWeather = ApiUtilities.getCurrentWeatherByCityName(cityName);
+
+            labelDateTime.Text = DisplayTextDataUtility.displayCurrentDateText();
             cityLable.Text = DisplayTextDataUtility.displayCity(currentWeather.CityName, currentWeather.Country);
             tempLabel.Text = DisplayTextDataUtility.displayTemp(ApiUtilities.convertKelvenToCelcius(currentWeather.Temp));
             feelsLikeLabel.Text = DisplayTextDataUtility.displayFeelsLike(ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike));
@@ -97,7 +99,7 @@ namespace the_weather_app
                 DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
 
                 //row.Cells["ColumnDateText"].Value = forecastWeatherElement.DateText;
-                row.Cells[0].Value = forecastWeatherElement.DateText;
+                row.Cells[0].Value = DisplayTextDataUtility.displayDateText(forecastWeatherElement.DateText);
                 row.Cells[1].Value = DisplayTextDataUtility.displayTemp(forecastWeatherElement.Temp);
                 row.Cells[2].Value = DisplayTextDataUtility.displayFeelsLike(ApiUtilities.convertKelvenToCelcius(forecastWeatherElement.FeelsLike));
                 row.Cells[3].Value = DisplayTextDataUtility.displayhumidity(forecastWeatherElement.Humidity);
@@ -122,6 +124,11 @@ namespace the_weather_app
             string message = "Invalid city entered!";
             string title = "Alert";
             MessageBox.Show(message, title);
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

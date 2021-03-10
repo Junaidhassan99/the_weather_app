@@ -152,6 +152,18 @@ namespace the_weather_app
             return "Cloud Cover : " + cloudCover + " %";
         }
 
+        public static string displayCurrentDateText()
+        {
+
+
+            return DateTime.Now.ToString().Replace("/", "-").Replace(" ", " at ").Replace("at PM", "PM").Replace("at AM", "AM");
+        }
+
+        public static string displayDateText(string dateText)
+        {
+            return dateText.Replace(" ", " at ");
+        }
+
 
     }
 }
