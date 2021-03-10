@@ -21,6 +21,7 @@ namespace the_weather_app
             InitializeComponent();
             Console.WriteLine("Form initialized");
 
+
             //find current location and set data here
 
         }
@@ -61,17 +62,14 @@ namespace the_weather_app
         private void setCurrentWeatherData(string cityName)
         {
             CurrentWeather currentWeather = ApiUtilities.getCurrentWeatherByCityName(cityName);
-            cityLable.Text = currentWeather.CityName + ", " + currentWeather.Country;
-            tempLabel.Text = "Temperature : " + ApiUtilities.convertKelvenToCelcius(currentWeather.Temp) + "°";
-            feelsLikeLabel.Text = "Feels Like : " + ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike) + "°";
-            pressureLabel.Text = "Pressure : " + currentWeather.Pressure + " hPa";
-            humidityLabel.Text = "Humidity : " + currentWeather.Humidity + " %";
-            windLabel.Text = "Wind : " + currentWeather.WindSpeed + " ms, " + currentWeather.WindDirection + "°";
-            cloudCoverLabel.Text = "Cloud Cover : " + currentWeather.CloudCover + " %";
+            cityLable.Text = DisplayTextDataUtility.displayCity(currentWeather.CityName, currentWeather.Country);
+            tempLabel.Text = DisplayTextDataUtility.displayTemp(ApiUtilities.convertKelvenToCelcius(currentWeather.Temp));
+            feelsLikeLabel.Text = DisplayTextDataUtility.displayFeelsLike(ApiUtilities.convertKelvenToCelcius(currentWeather.FeelsLike));
+            pressureLabel.Text = DisplayTextDataUtility.displayPressure(currentWeather.Pressure);
+            humidityLabel.Text = DisplayTextDataUtility.displayhumidity(currentWeather.Humidity);
+            windLabel.Text = DisplayTextDataUtility.displaywind(currentWeather.WindSpeed, currentWeather.WindDirection);
+            cloudCoverLabel.Text = DisplayTextDataUtility.displayCloudCover(currentWeather.CloudCover);
             currentWeatherIconImage.ImageLocation = ApiUtilities.getImageUrl(currentWeather.ImageIcon);
-
-
-
         }
 
         private void setForecasteWeatherData(string cityName)
@@ -91,12 +89,12 @@ namespace the_weather_app
 
                 //row.Cells["ColumnDateText"].Value = forecastWeatherElement.DateText;
                 row.Cells[0].Value = forecastWeatherElement.DateText;
-                row.Cells[1].Value = forecastWeatherElement.Temp;
-                row.Cells[2].Value = forecastWeatherElement.FeelsLike;
-                row.Cells[3].Value = forecastWeatherElement.Humidity;
-                row.Cells[4].Value = forecastWeatherElement.Pressure;
-                row.Cells[5].Value = forecastWeatherElement.WindSpeed + forecastWeatherElement.WindDirection;
-                row.Cells[6].Value = forecastWeatherElement.CloudCover;
+                row.Cells[1].Value = DisplayTextDataUtility.displayTemp(forecastWeatherElement.Temp);
+                row.Cells[2].Value = DisplayTextDataUtility.displayFeelsLike(ApiUtilities.convertKelvenToCelcius(forecastWeatherElement.FeelsLike));
+                row.Cells[3].Value = DisplayTextDataUtility.displayhumidity(forecastWeatherElement.Humidity);
+                row.Cells[4].Value = DisplayTextDataUtility.displayPressure(forecastWeatherElement.Pressure);
+                row.Cells[5].Value = DisplayTextDataUtility.displaywind(forecastWeatherElement.WindSpeed, forecastWeatherElement.WindDirection);
+                row.Cells[6].Value = DisplayTextDataUtility.displayCloudCover(forecastWeatherElement.CloudCover);
 
                 dataGridView1.Rows.Add(row);
 

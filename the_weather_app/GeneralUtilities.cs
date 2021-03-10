@@ -114,4 +114,44 @@ namespace the_weather_app
         }
 
     }
+
+    public class DisplayTextDataUtility
+    {
+        public static string displayCity(string cityName, string countryName)
+        {
+            return cityName + ", " + countryName;
+        }
+
+        public static string displayTemp(string temp)
+        {
+            return "Temperature : " + ApiUtilities.convertKelvenToCelcius(temp) + "°";
+        }
+
+        public static string displayFeelsLike(string feelsLike)
+        {
+            return "Feels Like : " + ApiUtilities.convertKelvenToCelcius(feelsLike) + "°";
+        }
+
+        public static string displayPressure(string pressure)
+        {
+            return "Pressure : " + pressure + " hPa";
+        }
+
+        public static string displayhumidity(string humidity)
+        {
+            return "Humidity : " + humidity + " %";
+        }
+
+        public static string displaywind(string windSpeed, string windDirection)
+        {
+            return "Wind : " + windSpeed + " ms, " + windDirection + "°";
+        }
+
+        public static string displayCloudCover(string cloudCover)
+        {
+            return "Cloud Cover : " + cloudCover + " %";
+        }
+
+
+    }
 }
