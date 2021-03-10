@@ -75,9 +75,18 @@ namespace the_weather_app
         {
             List<ForecastWeather> forecastWeatherList = ApiUtilities.getForecastWeatherByCityName(cityName);
 
+            //ListView ListView = new ListView();
+
             foreach (ForecastWeather forecastWeatherElement in forecastWeatherList)
             {
                 Console.WriteLine("test : {0}", forecastWeatherElement.DateText);
+
+
+                //listView1.Items.Add(forecastWeatherElement.DateText);
+                //listView1.Columns.
+                //tableLayoutPanel1
+                //dataGridView1.Rows.Add("five", "six", "seven", "eight");
+
             }
 
         }

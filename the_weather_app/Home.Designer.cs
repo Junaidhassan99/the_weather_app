@@ -39,8 +39,17 @@ namespace the_weather_app
             this.humidityLabel = new System.Windows.Forms.Label();
             this.pressureLabel = new System.Windows.Forms.Label();
             this.windLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColumnDateText = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnFeelsLike = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnHumidity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPressure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnWind = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCloudCover = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // cityLable
@@ -135,11 +144,79 @@ namespace the_weather_app
             this.windLabel.TabIndex = 10;
             this.windLabel.Text = "-";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnDateText,
+            this.ColumnTemp,
+            this.ColumnFeelsLike,
+            this.ColumnHumidity,
+            this.ColumnPressure,
+            this.ColumnWind,
+            this.ColumnCloudCover});
+            this.dataGridView1.Location = new System.Drawing.Point(126, 290);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(948, 396);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // ColumnDateText
+            // 
+            this.ColumnDateText.HeaderText = "Date and Time";
+            this.ColumnDateText.MinimumWidth = 6;
+            this.ColumnDateText.Name = "ColumnDateText";
+            this.ColumnDateText.Width = 150;
+            // 
+            // ColumnTemp
+            // 
+            this.ColumnTemp.HeaderText = "Temperature";
+            this.ColumnTemp.MinimumWidth = 6;
+            this.ColumnTemp.Name = "ColumnTemp";
+            this.ColumnTemp.Width = 125;
+            // 
+            // ColumnFeelsLike
+            // 
+            this.ColumnFeelsLike.HeaderText = "Feels Like";
+            this.ColumnFeelsLike.MinimumWidth = 6;
+            this.ColumnFeelsLike.Name = "ColumnFeelsLike";
+            this.ColumnFeelsLike.Width = 125;
+            // 
+            // ColumnHumidity
+            // 
+            this.ColumnHumidity.HeaderText = "Humidity";
+            this.ColumnHumidity.MinimumWidth = 6;
+            this.ColumnHumidity.Name = "ColumnHumidity";
+            this.ColumnHumidity.Width = 125;
+            // 
+            // ColumnPressure
+            // 
+            this.ColumnPressure.HeaderText = "Pressure";
+            this.ColumnPressure.MinimumWidth = 6;
+            this.ColumnPressure.Name = "ColumnPressure";
+            this.ColumnPressure.Width = 125;
+            // 
+            // ColumnWind
+            // 
+            this.ColumnWind.HeaderText = "Wind";
+            this.ColumnWind.MinimumWidth = 6;
+            this.ColumnWind.Name = "ColumnWind";
+            this.ColumnWind.Width = 125;
+            // 
+            // ColumnCloudCover
+            // 
+            this.ColumnCloudCover.HeaderText = "Cloud Cover";
+            this.ColumnCloudCover.MinimumWidth = 6;
+            this.ColumnCloudCover.Name = "ColumnCloudCover";
+            this.ColumnCloudCover.Width = 125;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1101, 698);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.windLabel);
             this.Controls.Add(this.cloudCoverLabel);
             this.Controls.Add(this.humidityLabel);
@@ -155,6 +232,7 @@ namespace the_weather_app
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +250,14 @@ namespace the_weather_app
         private System.Windows.Forms.Label humidityLabel;
         private System.Windows.Forms.Label pressureLabel;
         private System.Windows.Forms.Label windLabel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDateText;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTemp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnFeelsLike;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnHumidity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPressure;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWind;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCloudCover;
     }
 }
 
