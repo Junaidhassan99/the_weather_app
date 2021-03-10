@@ -21,16 +21,8 @@ namespace the_weather_app
             InitializeComponent();
             Console.WriteLine("Form initialized");
 
-            try
-            {
-                //find current location and set data here
+            //find current location and set data here
 
-            }
-            catch (Exception exception)
-            {
-                Console.WriteLine(exception);
-                //textBox1.Text = "Invalid City";
-            }
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -49,9 +41,20 @@ namespace the_weather_app
             string searchTextBoxString;
             if (e.KeyChar == (char)Keys.Enter)
             {
-                searchTextBoxString = searchTextBox.Text;
-                setCurrentWeatherData(searchTextBoxString);
-                setForecasteWeatherData(searchTextBoxString);
+                try
+                {
+
+                    searchTextBoxString = searchTextBox.Text;
+                    setCurrentWeatherData(searchTextBoxString);
+                    setForecasteWeatherData(searchTextBoxString);
+
+                }
+                catch (Exception exception)
+                {
+                    Console.WriteLine(exception);
+                    errorMessageBox();
+                }
+
             }
         }
 
@@ -77,15 +80,26 @@ namespace the_weather_app
 
             //ListView ListView = new ListView();
 
-            foreach (ForecastWeather forecastWeatherElement in forecastWeatherList)
+            //foreach (ForecastWeather forecastWeatherElement in forecastWeatherList)
+            for (int i = 0; i < forecastWeatherList.Count; i++)
             {
+                ForecastWeather forecastWeatherElement = forecastWeatherList[i];
+
                 Console.WriteLine("test : {0}", forecastWeatherElement.DateText);
 
+                DataGridViewRow row = (DataGridViewRow)dataGridView1.Rows[i].Clone();
 
-                //listView1.Items.Add(forecastWeatherElement.DateText);
-                //listView1.Columns.
-                //tableLayoutPanel1
-                //dataGridView1.Rows.Add("five", "six", "seven", "eight");
+                //row.Cells["ColumnDateText"].Value = forecastWeatherElement.DateText;
+                row.Cells[0].Value = forecastWeatherElement.DateText;
+                row.Cells[1].Value = forecastWeatherElement.Temp;
+                row.Cells[2].Value = forecastWeatherElement.FeelsLike;
+                row.Cells[3].Value = forecastWeatherElement.Humidity;
+                row.Cells[4].Value = forecastWeatherElement.Pressure;
+                row.Cells[5].Value = forecastWeatherElement.WindSpeed + forecastWeatherElement.WindDirection;
+                row.Cells[6].Value = forecastWeatherElement.CloudCover;
+
+                dataGridView1.Rows.Add(row);
+
 
             }
 
@@ -94,6 +108,13 @@ namespace the_weather_app
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void errorMessageBox()
+        {
+            string message = "Invalid city entered!";
+            string title = "Alert";
+            MessageBox.Show(message, title);
         }
     }
 

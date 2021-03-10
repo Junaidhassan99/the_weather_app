@@ -215,7 +215,7 @@ namespace the_weather_app
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 698);
+            this.ClientSize = new System.Drawing.Size(1098, 733);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.windLabel);
             this.Controls.Add(this.cloudCoverLabel);
