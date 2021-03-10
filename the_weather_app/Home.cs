@@ -21,6 +21,9 @@ namespace the_weather_app
             InitializeComponent();
             Console.WriteLine("Form initialized");
 
+            //groupBox2.Left = (this.ClientSize.Width - groupBox2.Width) / 2;
+            //Console.WriteLine("change resolution");
+            //groupBox2.Top = (this.ClientSize.Height - groupBox2.Height) / 2;
 
             //find current location and set data here
 
@@ -30,7 +33,13 @@ namespace the_weather_app
         {
             Console.WriteLine("Home Loaded");
 
+
+
         }
+
+
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
