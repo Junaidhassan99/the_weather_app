@@ -11,3 +11,16 @@ D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app
 D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.exe
 D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.pdb
 D:\Working\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csprojAssemblyReference.cache
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\bin\Debug\the_weather_app.exe.config
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\bin\Debug\the_weather_app.exe
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\bin\Debug\the_weather_app.pdb
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\bin\Debug\Newtonsoft.Json.dll
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\bin\Debug\Newtonsoft.Json.xml
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csprojAssemblyReference.cache
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.Home.resources
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.Properties.Resources.resources
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csproj.GenerateResource.cache
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csproj.CoreCompileInputs.cache
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csproj.CopyComplete
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.exe
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.pdb

@@ -20,6 +20,7 @@ namespace the_weather_app
         {
             InitializeComponent();
             Console.WriteLine("Form initialized");
+            this.Text = "The Weather";
 
             //groupBox2.Left = (this.ClientSize.Width - groupBox2.Width) / 2;
             //Console.WriteLine("change resolution");

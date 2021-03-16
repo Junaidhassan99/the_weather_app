@@ -38,23 +38,25 @@ namespace the_weather_app
             this.ColumnWind = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCloudCover = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cloudCoverLabel = new System.Windows.Forms.Label();
-            this.tempLabel = new System.Windows.Forms.Label();
-            this.humidityLabel = new System.Windows.Forms.Label();
-            this.windLabel = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cityLable = new System.Windows.Forms.Label();
-            this.pressureLabel = new System.Windows.Forms.Label();
-            this.feelsLikeLabel = new System.Windows.Forms.Label();
-            this.currentWeatherIconImage = new System.Windows.Forms.PictureBox();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.labelDateTime = new System.Windows.Forms.Label();
+            this.cityLable = new System.Windows.Forms.Label();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.windLabel = new System.Windows.Forms.Label();
+            this.currentWeatherIconImage = new System.Windows.Forms.PictureBox();
+            this.humidityLabel = new System.Windows.Forms.Label();
+            this.feelsLikeLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tempLabel = new System.Windows.Forms.Label();
+            this.pressureLabel = new System.Windows.Forms.Label();
+            this.cloudCoverLabel = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -141,103 +143,12 @@ namespace the_weather_app
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Weather Forecaste";
             // 
-            // cloudCoverLabel
-            // 
-            this.cloudCoverLabel.AutoSize = true;
-            this.cloudCoverLabel.Location = new System.Drawing.Point(431, 164);
-            this.cloudCoverLabel.Name = "cloudCoverLabel";
-            this.cloudCoverLabel.Size = new System.Drawing.Size(13, 17);
-            this.cloudCoverLabel.TabIndex = 9;
-            this.cloudCoverLabel.Text = "-";
-            // 
-            // tempLabel
-            // 
-            this.tempLabel.AutoSize = true;
-            this.tempLabel.Location = new System.Drawing.Point(235, 134);
-            this.tempLabel.Name = "tempLabel";
-            this.tempLabel.Size = new System.Drawing.Size(13, 17);
-            this.tempLabel.TabIndex = 2;
-            this.tempLabel.Text = "-";
-            // 
-            // humidityLabel
-            // 
-            this.humidityLabel.AutoSize = true;
-            this.humidityLabel.Location = new System.Drawing.Point(431, 134);
-            this.humidityLabel.Name = "humidityLabel";
-            this.humidityLabel.Size = new System.Drawing.Size(13, 17);
-            this.humidityLabel.TabIndex = 8;
-            this.humidityLabel.Text = "-";
-            // 
-            // windLabel
-            // 
-            this.windLabel.AutoSize = true;
-            this.windLabel.Location = new System.Drawing.Point(235, 198);
-            this.windLabel.Name = "windLabel";
-            this.windLabel.Size = new System.Drawing.Size(13, 17);
-            this.windLabel.TabIndex = 10;
-            this.windLabel.Text = "-";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::the_weather_app.Properties.Resources.search_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(205, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 22);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cityLable
-            // 
-            this.cityLable.AutoSize = true;
-            this.cityLable.Location = new System.Drawing.Point(235, 98);
-            this.cityLable.Name = "cityLable";
-            this.cityLable.Size = new System.Drawing.Size(13, 17);
-            this.cityLable.TabIndex = 0;
-            this.cityLable.Text = "-";
-            // 
-            // pressureLabel
-            // 
-            this.pressureLabel.AutoSize = true;
-            this.pressureLabel.Location = new System.Drawing.Point(431, 98);
-            this.pressureLabel.Name = "pressureLabel";
-            this.pressureLabel.Size = new System.Drawing.Size(13, 17);
-            this.pressureLabel.TabIndex = 7;
-            this.pressureLabel.Text = "-";
-            // 
-            // feelsLikeLabel
-            // 
-            this.feelsLikeLabel.AutoSize = true;
-            this.feelsLikeLabel.Location = new System.Drawing.Point(235, 164);
-            this.feelsLikeLabel.Name = "feelsLikeLabel";
-            this.feelsLikeLabel.Size = new System.Drawing.Size(13, 17);
-            this.feelsLikeLabel.TabIndex = 6;
-            this.feelsLikeLabel.Text = "-";
-            // 
-            // currentWeatherIconImage
-            // 
-            this.currentWeatherIconImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.currentWeatherIconImage.Location = new System.Drawing.Point(59, 98);
-            this.currentWeatherIconImage.Name = "currentWeatherIconImage";
-            this.currentWeatherIconImage.Size = new System.Drawing.Size(124, 94);
-            this.currentWeatherIconImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.currentWeatherIconImage.TabIndex = 5;
-            this.currentWeatherIconImage.TabStop = false;
-            this.currentWeatherIconImage.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // searchTextBox
-            // 
-            this.searchTextBox.Location = new System.Drawing.Point(238, 21);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(206, 22);
-            this.searchTextBox.TabIndex = 3;
-            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
-            this.searchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchTextBox_KeyPress);
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.labelDateTime);
             this.groupBox2.Controls.Add(this.cityLable);
             this.groupBox2.Controls.Add(this.searchTextBox);
@@ -249,9 +160,9 @@ namespace the_weather_app
             this.groupBox2.Controls.Add(this.tempLabel);
             this.groupBox2.Controls.Add(this.pressureLabel);
             this.groupBox2.Controls.Add(this.cloudCoverLabel);
-            this.groupBox2.Location = new System.Drawing.Point(237, 21);
+            this.groupBox2.Location = new System.Drawing.Point(90, 21);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(637, 227);
+            this.groupBox2.Size = new System.Drawing.Size(948, 227);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Current Weather";
@@ -265,6 +176,117 @@ namespace the_weather_app
             this.labelDateTime.TabIndex = 11;
             this.labelDateTime.Text = "-";
             // 
+            // cityLable
+            // 
+            this.cityLable.AutoSize = true;
+            this.cityLable.Location = new System.Drawing.Point(235, 98);
+            this.cityLable.Name = "cityLable";
+            this.cityLable.Size = new System.Drawing.Size(13, 17);
+            this.cityLable.TabIndex = 0;
+            this.cityLable.Text = "-";
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(238, 21);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(206, 22);
+            this.searchTextBox.TabIndex = 3;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            this.searchTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.searchTextBox_KeyPress);
+            // 
+            // windLabel
+            // 
+            this.windLabel.AutoSize = true;
+            this.windLabel.Location = new System.Drawing.Point(235, 198);
+            this.windLabel.Name = "windLabel";
+            this.windLabel.Size = new System.Drawing.Size(13, 17);
+            this.windLabel.TabIndex = 10;
+            this.windLabel.Text = "-";
+            // 
+            // currentWeatherIconImage
+            // 
+            this.currentWeatherIconImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.currentWeatherIconImage.Location = new System.Drawing.Point(59, 98);
+            this.currentWeatherIconImage.Name = "currentWeatherIconImage";
+            this.currentWeatherIconImage.Size = new System.Drawing.Size(124, 94);
+            this.currentWeatherIconImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.currentWeatherIconImage.TabIndex = 5;
+            this.currentWeatherIconImage.TabStop = false;
+            this.currentWeatherIconImage.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // humidityLabel
+            // 
+            this.humidityLabel.AutoSize = true;
+            this.humidityLabel.Location = new System.Drawing.Point(431, 134);
+            this.humidityLabel.Name = "humidityLabel";
+            this.humidityLabel.Size = new System.Drawing.Size(13, 17);
+            this.humidityLabel.TabIndex = 8;
+            this.humidityLabel.Text = "-";
+            // 
+            // feelsLikeLabel
+            // 
+            this.feelsLikeLabel.AutoSize = true;
+            this.feelsLikeLabel.Location = new System.Drawing.Point(235, 164);
+            this.feelsLikeLabel.Name = "feelsLikeLabel";
+            this.feelsLikeLabel.Size = new System.Drawing.Size(13, 17);
+            this.feelsLikeLabel.TabIndex = 6;
+            this.feelsLikeLabel.Text = "-";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::the_weather_app.Properties.Resources.search_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(205, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 22);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // tempLabel
+            // 
+            this.tempLabel.AutoSize = true;
+            this.tempLabel.Location = new System.Drawing.Point(235, 134);
+            this.tempLabel.Name = "tempLabel";
+            this.tempLabel.Size = new System.Drawing.Size(13, 17);
+            this.tempLabel.TabIndex = 2;
+            this.tempLabel.Text = "-";
+            // 
+            // pressureLabel
+            // 
+            this.pressureLabel.AutoSize = true;
+            this.pressureLabel.Location = new System.Drawing.Point(431, 98);
+            this.pressureLabel.Name = "pressureLabel";
+            this.pressureLabel.Size = new System.Drawing.Size(13, 17);
+            this.pressureLabel.TabIndex = 7;
+            this.pressureLabel.Text = "-";
+            // 
+            // cloudCoverLabel
+            // 
+            this.cloudCoverLabel.AutoSize = true;
+            this.cloudCoverLabel.Location = new System.Drawing.Point(431, 164);
+            this.cloudCoverLabel.Name = "cloudCoverLabel";
+            this.cloudCoverLabel.Size = new System.Drawing.Size(13, 17);
+            this.cloudCoverLabel.TabIndex = 9;
+            this.cloudCoverLabel.Text = "-";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(791, 127);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(102, 49);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "About Us";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(791, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 49);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Help";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,10 +299,10 @@ namespace the_weather_app
             this.Load += new System.EventHandler(this.Home_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.currentWeatherIconImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -307,6 +329,8 @@ namespace the_weather_app
         private System.Windows.Forms.Label windLabel;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label labelDateTime;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
