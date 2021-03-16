@@ -24,3 +24,5 @@ D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_
 D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.csproj.CopyComplete
 D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.exe
 D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.pdb
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.AboutUsForm.resources
+D:\Semester 3\C# Projects\the_weather_app\the_weather_app\obj\Debug\the_weather_app.HelpForm.resources

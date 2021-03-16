@@ -131,6 +131,22 @@ namespace the_weather_app
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("help was pressed");
+
+            HelpForm helpForm = new HelpForm();
+            helpForm.Show();
+            //this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AboutUsForm aboutUsForm = new AboutUsForm();
+            aboutUsForm.Show();
+            //this.Hide();
+        }
     }
 
 
