@@ -40,7 +40,7 @@ namespace the_weather_app
             this.label1.Size = new System.Drawing.Size(356, 102);
             this.label1.TabIndex = 0;
             this.label1.Text = "Made By:\r\n\r\n* JUNAID HASSAN (284925)\r\n* SAUDIA FORMER KING FAHAD ABDULLAH (286137" +
-    ")\r\n* FAWAD AHMED QURESHI\r\n* HAMZA HANIF MIR (293201)\r\n";
+    ")\r\n* FAWAD AHMED QURESHI (283119)\r\n* HAMZA HANIF MIR (293201)\r\n";
             // 
             // AboutUsForm
             // 
