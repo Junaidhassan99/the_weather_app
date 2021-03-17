@@ -15,6 +15,12 @@ namespace the_weather_app
         public AboutUsForm()
         {
             InitializeComponent();
+            this.Text = "About Us";
+        }
+
+        private void AboutUsForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

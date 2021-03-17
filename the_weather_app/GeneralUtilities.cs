@@ -124,12 +124,12 @@ namespace the_weather_app
 
         public static string displayTemp(string temp)
         {
-            return "Temperature : " + ApiUtilities.convertKelvenToCelcius(temp) + "°";
+            return "Temperature : " + ApiUtilities.convertKelvenToCelcius(temp) + "° C";
         }
 
         public static string displayFeelsLike(string feelsLike)
         {
-            return "Feels Like : " + ApiUtilities.convertKelvenToCelcius(feelsLike) + "°";
+            return "Feels Like : " + ApiUtilities.convertKelvenToCelcius(feelsLike) + "° C";
         }
 
         public static string displayPressure(string pressure)

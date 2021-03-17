@@ -30,33 +30,50 @@ namespace the_weather_app
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(150, 100);
+            this.label1.Location = new System.Drawing.Point(6, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 102);
+            this.label1.Size = new System.Drawing.Size(356, 68);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Made By:\r\n\r\n* JUNAID HASSAN (284925)\r\n* SAUDIA FORMER KING FAHAD ABDULLAH (286137" +
-    ")\r\n* FAWAD AHMED QURESHI (283119)\r\n* HAMZA HANIF MIR (293201)\r\n";
+            this.label1.Text = "* JUNAID HASSAN (284925)\r\n* SAUDIA FORMER KING FAHAD ABDULLAH (286137)\r\n* FAWAD A" +
+    "HMED QURESHI (283119)\r\n* HAMZA HANIF MIR (293201)\r\n";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(150, 100);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(385, 192);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Made By";
             // 
             // AboutUsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "AboutUsForm";
             this.Text = "AboutUsForm";
+            this.Load += new System.EventHandler(this.AboutUsForm_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
