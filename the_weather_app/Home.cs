@@ -125,7 +125,7 @@ namespace the_weather_app
 
         private void errorMessageBox()
         {
-            string message = "Invalid city name entered!";
+            string message = "Either internet is not avalible or city name entered is invalid!";
             string title = "Alert";
             MessageBox.Show(message, title);
         }
