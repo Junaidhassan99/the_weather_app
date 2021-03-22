@@ -122,34 +122,64 @@ namespace the_weather_app
             return cityName + ", " + countryName;
         }
 
-        public static string displayTemp(string temp)
+        public static string displayTemp(string temp, bool isGrid = false)
         {
-            return "Temperature : " + ApiUtilities.convertKelvenToCelcius(temp) + "° C";
+            String text = "Temperature : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + ApiUtilities.convertKelvenToCelcius(temp) + "° C";
         }
 
-        public static string displayFeelsLike(string feelsLike)
+        public static string displayFeelsLike(string feelsLike, bool isGrid = false)
         {
-            return "Feels Like : " + ApiUtilities.convertKelvenToCelcius(feelsLike) + "° C";
+            String text = "Feels Like : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + ApiUtilities.convertKelvenToCelcius(feelsLike) + "° C";
         }
 
-        public static string displayPressure(string pressure)
+        public static string displayPressure(string pressure, bool isGrid = false)
         {
-            return "Pressure : " + pressure + " hPa";
+            String text = "Pressure : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + pressure + " hPa";
         }
 
-        public static string displayhumidity(string humidity)
+        public static string displayhumidity(string humidity, bool isGrid = false)
         {
-            return "Humidity : " + humidity + " %";
+            String text = "Humidity : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + humidity + " %";
         }
 
-        public static string displaywind(string windSpeed, string windDirection)
+        public static string displaywind(string windSpeed, string windDirection, bool isGrid = false)
         {
-            return "Wind : " + windSpeed + " ms, " + windDirection + "°";
+            String text = "Wind : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + windSpeed + " ms, " + windDirection + "°";
         }
 
-        public static string displayCloudCover(string cloudCover)
+        public static string displayCloudCover(string cloudCover, bool isGrid = false)
         {
-            return "Cloud Cover : " + cloudCover + " %";
+            String text = "Cloud Cover : ";
+            if (isGrid)
+            {
+                text = "";
+            }
+            return text + cloudCover + " %";
         }
 
         public static string displayCurrentDateText()

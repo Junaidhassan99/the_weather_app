@@ -49,9 +49,9 @@ namespace the_weather_app
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(150, 100);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(372, 17);
+            this.label1.Size = new System.Drawing.Size(381, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Type required city name in the TextBox and press ENTER";
+            this.label1.Text = "* Type required city name in the TextBox and press ENTER";
             // 
             // HelpForm
             // 

@@ -22,6 +22,7 @@ namespace the_weather_app
             Console.WriteLine("Form initialized");
             this.Text = "The Weather";
 
+
             //groupBox2.Left = (this.ClientSize.Width - groupBox2.Width) / 2;
             //Console.WriteLine("change resolution");
             //groupBox2.Top = (this.ClientSize.Height - groupBox2.Height) / 2;
@@ -103,13 +104,13 @@ namespace the_weather_app
 
                 //row.Cells["ColumnDateText"].Value = forecastWeatherElement.DateText;
                 row.Cells[0].Value = DisplayTextDataUtility.displayDateText(forecastWeatherElement.DateText);
-                row.Cells[1].Value = DisplayTextDataUtility.displayTemp(forecastWeatherElement.Temp);
+                row.Cells[1].Value = DisplayTextDataUtility.displayTemp(forecastWeatherElement.Temp, true);
                 //row.Cells[2].Value = DisplayTextDataUtility.displayFeelsLike(ApiUtilities.convertKelvenToCelcius(forecastWeatherElement.FeelsLike));
-                row.Cells[2].Value = DisplayTextDataUtility.displayFeelsLike(forecastWeatherElement.FeelsLike);
-                row.Cells[3].Value = DisplayTextDataUtility.displayhumidity(forecastWeatherElement.Humidity);
-                row.Cells[4].Value = DisplayTextDataUtility.displayPressure(forecastWeatherElement.Pressure);
-                row.Cells[5].Value = DisplayTextDataUtility.displaywind(forecastWeatherElement.WindSpeed, forecastWeatherElement.WindDirection);
-                row.Cells[6].Value = DisplayTextDataUtility.displayCloudCover(forecastWeatherElement.CloudCover);
+                row.Cells[2].Value = DisplayTextDataUtility.displayFeelsLike(forecastWeatherElement.FeelsLike, true);
+                row.Cells[3].Value = DisplayTextDataUtility.displayhumidity(forecastWeatherElement.Humidity, true);
+                row.Cells[4].Value = DisplayTextDataUtility.displayPressure(forecastWeatherElement.Pressure, true);
+                row.Cells[5].Value = DisplayTextDataUtility.displaywind(forecastWeatherElement.WindSpeed, forecastWeatherElement.WindDirection, true);
+                row.Cells[6].Value = DisplayTextDataUtility.displayCloudCover(forecastWeatherElement.CloudCover, true);
 
                 dataGridView1.Rows.Add(row);
 
